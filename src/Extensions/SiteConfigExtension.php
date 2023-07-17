@@ -41,8 +41,6 @@ class SiteConfigExtension extends DataExtension
             EmailField::create('GeneralEmail', 'Email'),
             TextField::create('GeneralPhone', 'Phone'),
             TextField::create('GeneralAddress', 'Address'),
-            UploadField::create('OpenGraphDefaultImage', 'Open Graph default image'),
-            UploadField::create('PlaceholderImage', 'Placeholder image'),
 
         ]);
 
