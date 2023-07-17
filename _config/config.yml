@@ -5,6 +5,7 @@ After:
   - '#goldfinch-formhandler'
   - '#goldfinch-socialkit'
   - '#goldfinch-instsupply'
+  - '#goldfinch-cookieconsent'
 ---
 
 SilverStripe\SiteConfig\SiteConfig:
