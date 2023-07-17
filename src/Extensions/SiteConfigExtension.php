@@ -2,6 +2,7 @@
 
 namespace Goldfinch\Basement\Extensions;
 
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\EmailField;
@@ -30,6 +31,14 @@ class SiteConfigExtension extends DataExtension
         'GeneralLinkedInURL' => 'Varchar',
     ];
 
+    private static $has_one = [
+        'PlaceholderImage' => Image::class,
+    ];
+
+    private static $owns = [
+        'PlaceholderImage',
+    ];
+
     public function updateCMSFields(FieldList $fields)
     {
         $fields->removeByName([
@@ -41,6 +50,7 @@ class SiteConfigExtension extends DataExtension
             EmailField::create('GeneralEmail', 'Email'),
             TextField::create('GeneralPhone', 'Phone'),
             TextField::create('GeneralAddress', 'Address'),
+            UploadField::create('PlaceholderImage', 'Placeholder image'),
 
         ]);
 
