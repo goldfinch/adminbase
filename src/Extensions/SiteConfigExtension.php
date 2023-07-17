@@ -106,8 +106,12 @@ class SiteConfigExtension extends DataExtension
         foreach(array_reverse($tabs) as $tabName)
         {
             $tab = $fields->fieldByName('Root.' . $tabName);
-            $fields->removeFieldFromTab('Root', $tabName);
-            $fields->insertAfter('Main', $tab);
+
+            if ($tab)
+            {
+                $fields->removeFieldFromTab('Root', $tabName);
+                $fields->insertAfter('Main', $tab);
+            }
         }
 
         return $fields;
