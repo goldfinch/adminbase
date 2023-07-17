@@ -3,7 +3,6 @@ Name: goldfinch-basement
 After:
   - '#goldfinch-tinify'
   - '#goldfinch-formhandler'
-  - '#goldfinch-socialkit'
   - '#goldfinch-instsupply'
   - '#goldfinch-cookieconsent'
 ---
