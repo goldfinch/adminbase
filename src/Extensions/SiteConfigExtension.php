@@ -97,9 +97,10 @@ class SiteConfigExtension extends DataExtension
 
         // Tabs Reorder
         $fields = $this->orderTabs([
-            'Forms',
             'Configurations',
+            'Forms',
             'SocialMedia',
+            'CookieConsent',
         ], $fields);
 
         // Rename Main tab at the very end
