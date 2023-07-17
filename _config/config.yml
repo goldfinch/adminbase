@@ -1,5 +1,10 @@
 ---
 Name: goldfinch-basement
+After:
+  - '#goldfinch-tinify'
+  - '#goldfinch-formhandler'
+  - '#goldfinch-socialkit'
+  - '#goldfinch-instsupply'
 ---
 
 SilverStripe\SiteConfig\SiteConfig:
