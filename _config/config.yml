@@ -1,8 +1,5 @@
 ---
 Name: goldfinch-basement
-After:
-  - '#rootroutes'
-  - '#coreroutes'
 ---
 
 SilverStripe\SiteConfig\SiteConfig:
