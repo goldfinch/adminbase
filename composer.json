@@ -1,0 +1,26 @@
+{
+    "name": "goldfinch/basement",
+    "description": "",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Artem Karasev"
+    }],
+    "require": {
+        "php": ">=8.0",
+        "silverstripe/framework": "^5.0",
+        "silverstripe/admin": "^2.0",
+        "nesbot/carbon": "^2.67",
+        "unclecheese/display-logic": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goldfinch\\Basement\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

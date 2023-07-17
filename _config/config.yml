@@ -1,0 +1,11 @@
+---
+Name: basement
+---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Goldfinch\Basement\Extensions\SiteConfigExtension
+
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - Goldfinch\Basement\Extensions\BaseElementExtension
