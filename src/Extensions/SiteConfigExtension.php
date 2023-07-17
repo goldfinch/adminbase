@@ -54,6 +54,8 @@ class SiteConfigExtension extends DataExtension
 
         ]);
 
+        $fields->addFieldsToTab('Root.Configurations', []);
+
         $fields->addFieldsToTab('Root.SocialMedia', [
 
             CompositeField::create(
