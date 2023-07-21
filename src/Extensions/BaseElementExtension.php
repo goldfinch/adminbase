@@ -9,12 +9,17 @@ class BaseElementExtension extends DataExtension
 {
     public function updateCMSFields(FieldList $fields)
     {
-        $title = $fields->dataFieldByName('Title')->setTitle('Block Title');
+        $title = $fields->dataFieldByName('Title');
+
+        if ($title)
+        {
+            $title->setTitle('Block Title');
+            $fields->removeByName('Title');
+            $fields->insertBefore('ExtraClass', $title);
+        }
+
         $global = $fields->dataFieldByName('AvailableGlobally');
 
-        $fields->removeByName('Title');
-
-        $fields->insertBefore('ExtraClass', $title);
         $fields->insertAfter('ExtraClass', $global);
     }
 
