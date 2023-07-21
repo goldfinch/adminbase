@@ -31,4 +31,9 @@ class BaseElementExtension extends DataExtension
           $this->owner->Title = $this->owner->getType();
         }
     }
+
+    public function getIconClassName()
+    {
+        return $this->owner->config()->get('icon');
+    }
 }
