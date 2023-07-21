@@ -4,6 +4,8 @@ After:
   - '#goldfinch-formhandler'
   - '#goldfinch-instsupply'
   - '#goldfinch-cookieconsent'
+  - '#elemental'
+  - '#elementalcache'
 ---
 
 SilverStripe\SiteConfig\SiteConfig:
