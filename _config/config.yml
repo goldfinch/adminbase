@@ -15,3 +15,48 @@ SilverStripe\SiteConfig\SiteConfig:
 DNADesign\Elemental\Models\BaseElement:
   extensions:
     - Goldfinch\Basement\Extensions\BaseElementExtension
+
+# Menu tree reorder
+
+
+Goldfinch\Dashboard\Admin\DashboardAdmin:
+  menu_priority: 50
+
+SilverStripe\CMS\Controllers\CMSPagesController:
+  menu_priority: 49
+
+SilverStripe\AssetAdmin\Controller\AssetAdmin:
+  menu_priority: 48
+
+Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
+  menu_priority: 47
+
+Goldfinch\Seokit\Admin\SEOAdmin:
+  menu_priority: 46
+
+Goldfinch\BugTracker\Admin\BugAdmin:
+  menu_priority: 45
+
+Goldfinch\Performance\Admin\PerformanceAdmin:
+  menu_priority: 44
+
+Axllent\MetaEditor\MetaEditor:
+  menu_priority: 43
+
+SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+  menu_priority: 42
+
+SilverStripe\VersionedAdmin\ArchiveAdmin:
+  menu_priority: 41
+
+SilverStripe\CampaignAdmin\CampaignAdmin:
+  menu_priority: 40
+
+SilverStripe\Reports\ReportAdmin:
+  menu_priority: 39
+
+SilverStripe\Admin\SecurityAdmin:
+  menu_priority: 38
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: 37
