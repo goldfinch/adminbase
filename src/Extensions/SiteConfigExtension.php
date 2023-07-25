@@ -18,6 +18,7 @@ class SiteConfigExtension extends DataExtension
         'GeneralEmail' => 'Varchar',
         'GeneralPhone' => 'Varchar',
         'GeneralAddress' => 'Varchar',
+        'GeneralCopyright' => 'Varchar',
 
         'GeneralFacebook' => 'Boolean',
         'GeneralFacebookURL' => 'Varchar',
@@ -41,16 +42,13 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->removeByName([
-            'Tagline',
-        ]);
-
         $fields->addFieldsToTab('Root.Main', [
 
             EmailField::create('GeneralEmail', 'Email'),
             TextField::create('GeneralPhone', 'Phone'),
             TextField::create('GeneralAddress', 'Address'),
             UploadField::create('PlaceholderImage', 'Placeholder image'),
+            TextField::create('GeneralCopyright', 'Copyright'),
 
         ]);
 
