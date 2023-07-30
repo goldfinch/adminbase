@@ -28,38 +28,41 @@ Goldfinch\Dashboard\Admin\DashboardAdmin:
 SilverStripe\CMS\Controllers\CMSPagesController:
   menu_priority: 49
 
-SilverStripe\AssetAdmin\Controller\AssetAdmin:
+Goldfinch\Components\Admin\ComponentAdmin:
   menu_priority: 48
 
-Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
+SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 47
 
-Goldfinch\Seokit\Admin\SEOAdmin:
+Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
   menu_priority: 46
 
-Goldfinch\BugTracker\Admin\BugTrackerAdmin:
+Goldfinch\Seokit\Admin\SEOAdmin:
   menu_priority: 45
 
-Goldfinch\Performance\Admin\PerformanceAdmin:
+Goldfinch\BugTracker\Admin\BugTrackerAdmin:
   menu_priority: 44
 
-Axllent\MetaEditor\MetaEditor:
+Goldfinch\Performance\Admin\PerformanceAdmin:
   menu_priority: 43
 
-SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+Axllent\MetaEditor\MetaEditor:
   menu_priority: 42
 
-SilverStripe\VersionedAdmin\ArchiveAdmin:
+SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
   menu_priority: 41
 
-SilverStripe\CampaignAdmin\CampaignAdmin:
+SilverStripe\VersionedAdmin\ArchiveAdmin:
   menu_priority: 40
 
-SilverStripe\Reports\ReportAdmin:
+SilverStripe\CampaignAdmin\CampaignAdmin:
   menu_priority: 39
 
-SilverStripe\Admin\SecurityAdmin:
+SilverStripe\Reports\ReportAdmin:
   menu_priority: 38
 
-SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+SilverStripe\Admin\SecurityAdmin:
   menu_priority: 37
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: 36
