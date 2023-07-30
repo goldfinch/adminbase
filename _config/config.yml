@@ -12,6 +12,10 @@ SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - Goldfinch\Basement\Extensions\SiteConfigExtension
 
+Page:
+  extensions:
+    - Goldfinch\Basement\Extensions\PageExtension
+
 DNADesign\Elemental\Models\BaseElement:
   extensions:
     - Goldfinch\Basement\Extensions\BaseElementExtension
