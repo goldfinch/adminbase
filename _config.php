@@ -2,7 +2,7 @@
 
 use SilverStripe\Core\Environment;
 use Wilr\GoogleSitemaps\GoogleSitemap;
-use Goldfinch\Components\Models\PageDataObject;
+use Goldfinch\Basement\Models\PageDataObject;
 
 if (Environment::hasEnv('APP_TIMEZONE'))
 {

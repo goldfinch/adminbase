@@ -1,6 +1,6 @@
 <?php
 
-namespace Goldfinch\Components\Models;
+namespace Goldfinch\Basement\Models;
 
 use gorriecoe\Link\Models\Link;
 use SilverStripe\ORM\DataObject;

@@ -1,8 +1,8 @@
 <?php
 
-namespace DNADesign\Elemental\Controllers;
+namespace Goldfinch\Basement\Controllers;
 
-use DNADesign\Elemental\Models\BaseElement;
+use Goldfinch\Basement\Models\PageDataObject;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
@@ -11,7 +11,7 @@ class PageDataObjectController extends Controller
 {
     protected $pageDataObject;
 
-    public function __construct(BaseElement $pageDataObject)
+    public function __construct(PageDataObject $pageDataObject)
     {
         $this->pageDataObject = $pageDataObject;
 
@@ -36,7 +36,7 @@ class PageDataObjectController extends Controller
             }
         }
 
-        $template = 'DNADesign\\Elemental\\' . $this->element->config()->get('controller_template');
+        $template = 'Basement\\Elemental\\' . $this->element->config()->get('controller_template');
         $this->extend('updateForTemplateTemplate', $template);
 
         return $this->renderWith([
@@ -49,7 +49,7 @@ class PageDataObjectController extends Controller
     {
         $page = Director::get_current_page();
 
-        if ($page && !($page instanceof ElementController)) {
+        if ($page && !($page instanceof PageDataObjectController)) {
             return Controller::join_links(
                 $page->Link($action),
                 '#'. $this->element->getAnchor()
@@ -58,7 +58,7 @@ class PageDataObjectController extends Controller
 
         $curr = Controller::curr();
 
-        if ($curr && !($curr instanceof ElementController)) {
+        if ($curr && !($curr instanceof PageDataObjectController)) {
             return Controller::join_links(
                 $curr->Link($action),
                 '#'. $this->element->getAnchor()
