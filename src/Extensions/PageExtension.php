@@ -18,7 +18,6 @@ class PageExtension extends Extension
 {
     private static $db = [
         'MetaTitle' => 'Varchar',
-        'Copyright' => 'Varchar',
         'ShowInFooter' => 'Boolean',
         'ShowOnlyToRobots' => 'Boolean',
     ];
@@ -112,19 +111,17 @@ class PageExtension extends Extension
         {
             $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
-
-        $fields->addFieldToTab('Root.Main', TextField::create('Copyright', 'Copyright'));
     }
 
-    protected function onBeforeWrite()
-    {
-        parent::onBeforeWrite();
+    // protected function onBeforeWrite()
+    // {
+    //     parent::onBeforeWrite();
 
-        // TODO
-        // if ($this->owner->ShowOnlyToRobots)
-        // {
-        //     $this->owner->ShowInMenus = 0;
-        //     $this->owner->ShowInFooter = 0;
-        // }
-    }
+    //     // TODO
+    //     // if ($this->owner->ShowOnlyToRobots)
+    //     // {
+    //     //     $this->owner->ShowInMenus = 0;
+    //     //     $this->owner->ShowInFooter = 0;
+    //     // }
+    // }
 }
