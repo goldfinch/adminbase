@@ -120,10 +120,11 @@ class PageExtension extends Extension
     {
         parent::onBeforeWrite();
 
-        if ($this->owner->ShowOnlyToRobots)
-        {
-            $this->owner->ShowInMenus = 0;
-            $this->owner->ShowInFooter = 0;
-        }
+        // TODO
+        // if ($this->owner->ShowOnlyToRobots)
+        // {
+        //     $this->owner->ShowInMenus = 0;
+        //     $this->owner->ShowInFooter = 0;
+        // }
     }
 }
