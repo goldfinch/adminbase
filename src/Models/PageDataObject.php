@@ -146,6 +146,13 @@ class PageDataObject extends DataObject implements CMSPreviewable
         $this->URLSegment = $this->generateURLSegment($this->Title);
     }
 
+    public function PreviewLink($action = null)
+    {
+        $link = $this->AbsoluteLink($action);
+        $this->extend('updatePreviewLink', $link, $action);
+        return $link;
+    }
+
     public function generateURLSegment($title)
     {
         $filter = URLSegmentFilter::create();
