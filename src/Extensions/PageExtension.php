@@ -3,13 +3,15 @@
 namespace Goldfinch\Basement\Extensions;
 
 use gorriecoe\Link\Models\Link;
-use gorriecoe\LinkField\LinkField;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
+use gorriecoe\LinkField\LinkField;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\CompositeField;
+use UncleCheese\DisplayLogic\Forms\Wrapper;
 use SilverStripe\CMS\Controllers\CMSPageEditController;
 
 class PageExtension extends Extension
@@ -85,12 +87,14 @@ class PageExtension extends Extension
 
               CheckboxField::create('ShowInSearch', 'Show in search'),
 
-              CompositeField::create(
+              CheckboxField::create('ShowOnlyToRobots', 'Show only to robots'),
 
-                  CheckboxField::create('ShowOnlyToRobots', 'Show only to robots'),
-                  LinkField::create('ShowOnlyToRobots_BackLink', 'Back link for users', $this)->displayIf('ShowOnlyToRobots')->isChecked()->end(),
+              Wrapper::create(
 
-              ),
+                LinkField::create('ShowOnlyToRobots_BackLink', 'Back link for users', $this->owner),
+
+              )->displayIf('ShowOnlyToRobots')->isChecked()->end(),
+
           ]
         );
 
@@ -109,17 +113,17 @@ class PageExtension extends Extension
             $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
 
-        $fileds->addFieldToTab('Root.Main', TextField::create('Copyright', 'Copyright'));
+        $fields->addFieldToTab('Root.Main', TextField::create('Copyright', 'Copyright'));
     }
 
     protected function onBeforeWrite()
     {
         parent::onBeforeWrite();
 
-        if ($this->ShowOnlyToRobots)
+        if ($this->owner->ShowOnlyToRobots)
         {
-            $this->ShowInMenus = 0;
-            $this->ShowInFooter = 0;
+            $this->owner->ShowInMenus = 0;
+            $this->owner->ShowInFooter = 0;
         }
     }
 }
