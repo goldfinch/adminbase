@@ -169,6 +169,16 @@ class PageDataObject extends DataObject implements CMSPreviewable
         return $filteredTitle;
     }
 
+    public function getMimeType()
+    {
+        return 'text/html';
+    }
+
+    public function CMSEditLink()
+    {
+        return $this->extend('CMSEditLink')[0] ?? '';
+    }
+
     public function RelativeLink($action = null)
     {
         if ($this->ParentID && self::config()->get('nested_urls')) {
