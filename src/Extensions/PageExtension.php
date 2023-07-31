@@ -2,6 +2,8 @@
 
 namespace Goldfinch\Basement\Extensions;
 
+use gorriecoe\Link\Models\Link;
+use gorriecoe\LinkField\LinkField;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\FieldGroup;
@@ -17,6 +19,10 @@ class PageExtension extends Extension
         'Copyright' => 'Varchar',
         'ShowInFooter' => 'Boolean',
         'ShowOnlyToRobots' => 'Boolean',
+    ];
+
+    private static $has_one = [
+        'ShowOnlyToRobots_BackLink' => Link::class,
     ];
 
     private static $icon_class = 'bi-file-earmark-text-fill';
@@ -72,8 +78,7 @@ class PageExtension extends Extension
               CompositeField::create(
 
                   CheckboxField::create('ShowOnlyToRobots', 'Show only to robots'),
-                  // TODO:
-                  TextField::create('Link', 'Link')->setAttribute('placeholder', '')->displayIf('ShowOnlyToRobots')->isChecked()->end(),
+                  LinkField::create('ShowOnlyToRobots_BackLink', 'Back link for users', $this)->displayIf('ShowOnlyToRobots')->isChecked()->end(),
 
               ),
           ]
