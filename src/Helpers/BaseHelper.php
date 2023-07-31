@@ -1,13 +1,16 @@
 <?php
 
- if (! function_exists('is_bot')) {
+namespace Goldfinch\Basement\Helpers;
+
+class BaseHelper
+{
     /**
      * Last commit #4033e71
      * https://github.com/fabiomb/is_bot
      *
      * @return boolean
      */
-    function is_bot($agent)
+    public static function is_bot($agent)
     {
         $bots = [
           'Googlebot'

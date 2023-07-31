@@ -25,10 +25,7 @@
     "autoload": {
         "psr-4": {
             "Goldfinch\\Basement\\": "src/"
-        },
-        "files": [
-            "helpers.php"
-        ]
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
