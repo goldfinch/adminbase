@@ -12,4 +12,26 @@ class SiteTreeExtension extends BaseSiteTreeExtension
     {
         $actions->insertBefore('ActionMenus', LiteralField::create('test', '<a target="_blank" href="'.$this->owner->Link().'?stage=Stage" class="btn btn-primary bi bi-binoculars-fill me-1" title="Review page on the website"></a>'));
     }
+
+    public function canView($member = null)
+    {
+        if (!parent::canView($member)) {
+            return false;
+        }
+
+        if (!is_robot($_SERVER['HTTP_USER_AGENT']) && $this->owner->ShowOnlyToRobots)
+        {
+            if ($this->owner->ShowOnlyToRobots_BacklinkID)
+            {
+                $this->redirect('/', 301);
+            }
+            else
+            {
+                // TODO
+                // $this->redirect($this->owner->ShowOnlyToRobots_Backlink->Link(), 301);
+            }
+        }
+
+        return false;
+    }
 }
