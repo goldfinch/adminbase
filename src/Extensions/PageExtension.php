@@ -25,6 +25,16 @@ class PageExtension extends Extension
         'ShowOnlyToRobots_BackLink' => Link::class,
     ];
 
+    // private static $many_many = [
+    //     'FooterLinks' => Link::class
+    // ];
+
+    // private static $many_many_extraFields = [
+    //     'FooterLinks' => [
+    //         'Sort' => 'Int',
+    //     ]
+    // ];
+
     private static $icon_class = 'bi-file-earmark-text-fill';
 
     public function updateSettingsFields(&$fields)
