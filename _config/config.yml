@@ -12,6 +12,10 @@ SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - Goldfinch\Basement\Extensions\SiteConfigExtension
 
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Goldfinch\Basement\Extensions\SiteTreeExtension
+
 Page:
   extensions:
     - Goldfinch\Basement\Extensions\PageExtension

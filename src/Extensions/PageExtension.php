@@ -7,7 +7,6 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\CMS\Controllers\CMSPageEditController;
 
@@ -99,10 +98,5 @@ class PageExtension extends Extension
         {
             $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
-    }
-
-    public function updateCMSActions(&$fields)
-    {
-        $fields->insertBefore('ActionMenus', LiteralField::create('test', '<a target="_blank" href="'.$this->owner->Link().'?stage=Stage" class="btn btn-primary bi bi-binoculars-fill me-1" title="Review page on the website"></a>'));
     }
 }
