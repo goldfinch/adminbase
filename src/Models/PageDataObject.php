@@ -2,10 +2,12 @@
 
 namespace Goldfinch\Basement\Models;
 
+use App\Pages\PDOPage;
 use gorriecoe\Link\Models\Link;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Control\Director;
+use SilverStripe\ORM\RelationList;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\ORM\CMSPreviewable;
@@ -19,6 +21,9 @@ use SilverStripe\VersionedAdmin\Forms\HistoryViewerField;
 
 class PageDataObject extends DataObject implements CMSPreviewable
 {
+    public static $pdo_up = null;
+    public static $pdo_down = null;
+
     private static $extensions = [
         Versioned::class,
     ];
@@ -179,6 +184,11 @@ class PageDataObject extends DataObject implements CMSPreviewable
         return $this->extend('CMSEditLink')[0] ?? '';
     }
 
+    public function Parent()
+    {
+        //
+    }
+
     public function RelativeLink($action = null)
     {
         if ($this->ParentID && self::config()->get('nested_urls')) {
@@ -235,5 +245,98 @@ class PageDataObject extends DataObject implements CMSPreviewable
     public function OpenGraph()
     {
         // Astrotomic\OpenGraph\OpenGraph
+    }
+
+    public function PDOChildren()
+    {
+        if (isset($this->ClassName::$pdo_up) && isset($this->ClassName::$pdo_up_children))
+        {
+            $method = $this->ClassName::$pdo_up_children;
+            $upPDO = $this->ClassName::$pdo_up;
+            dd($method);
+            // $upPDO = $this->$upPDO();
+
+            // dd($upPDO);
+        }
+    }
+
+    public function PDOParent()
+    {
+        if (isset($this->ClassName::$pdo_down))
+        {
+            $current = $this->ClassName::$pdo_down;
+
+            if ($current === PDOPage::class)
+            {
+                return $current::get()->filter('PageDataObject', $this->ClassName)->first();
+            }
+
+            $parent = $this->$current();
+
+            if (is_subclass_of($parent, RelationList::class))
+            {
+                // multiple
+                return $parent->first();
+            }
+            else
+            {
+                // single, belongs to ..
+            }
+        }
+    }
+
+    public function PDOLink($AbsoluteLink = false, $nestedLink = '')
+    {
+        if ($this->URLSegment)
+        {
+            $nestedLink = rtrim($this->URLSegment . '/' . $nestedLink, '/');
+        }
+
+        if (isset($this->ClassName::$pdo_down))
+        {
+            $current = $this->ClassName::$pdo_down;
+
+            if ($current === PDOPage::class)
+            {
+                $pdoPage = $current::get()->filter('PageDataObject', $this->ClassName)->first();
+
+                if ($pdoPage && $pdoPage->exists())
+                {
+                    if ($AbsoluteLink)
+                    {
+                        return $pdoPage->AbsoluteLink() . '/' . $nestedLink;
+                    }
+                    else
+                    {
+                        return '/' . $pdoPage->URLSegment . '/' . $nestedLink;
+                    }
+                }
+
+                return '#broken-link';
+            }
+
+            $parent = $this->$current();
+
+            if (is_subclass_of($parent, RelationList::class))
+            {
+                // TODO: multiple conacoil
+                // $parent->first()->map('ID', 'URLSegment')->toArray();
+                // $parent->map('ID', 'URLSegment')->toArray();
+                $obj = $parent->first();
+
+                if ($obj && $obj->exists())
+                {
+                    return $obj->PDOLink($AbsoluteLink, $nestedLink);
+                }
+            }
+            else
+            {
+                // single, belongs to ..
+            }
+        }
+        else
+        {
+            return '#broken-link'; // $this->URLSegment . '/' . $nestedLink;
+        }
     }
 }
