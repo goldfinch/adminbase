@@ -84,7 +84,7 @@ class PageDataObject extends DataObject implements CMSPreviewable
     private static $many_many_extraFields = [];
     private static $belongs_many_many = [];
 
-    private static $default_sort = 'Sort';
+    private static $default_sort = 'LastEdited';
 
     private static $searchable_fields = [
         'ID' => [
