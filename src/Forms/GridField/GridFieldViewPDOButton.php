@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forms\GridField;
+namespace Goldfinch\Basement\Forms\GridField;
 
 use SilverStripe\View\SSViewer;
 use SilverStripe\View\ArrayData;

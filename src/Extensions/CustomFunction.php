@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Extensions;
+namespace Goldfinch\Basement\Extensions;
 
 use SilverStripe\ORM\DataExtension;
 

@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Forms\GridField;
+namespace Goldfinch\Basement\Forms\GridField;
 
-use App\Forms\GridField\GridFieldViewPDOButton;
 use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
 use SilverStripe\Forms\GridField\GridFieldEditButton;
