@@ -1,6 +1,6 @@
 <?php
 
-namespace Goldfinch\Basement\Forms\GridField;
+namespace Goldfinch\Nest\Forms\GridField;
 
 use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
@@ -12,7 +12,7 @@ use SilverStripe\Forms\GridField\GridFieldFilterHeader;
 use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
 use SilverStripe\Forms\GridField\GridFieldSortableHeader;
 
-class GridFieldConfigBase extends GridFieldConfig
+class GridFieldNestConfig extends GridFieldConfig
 {
     public function __construct($itemsPerPage = null)
     {
@@ -26,7 +26,7 @@ class GridFieldConfigBase extends GridFieldConfig
             GridFieldDetailForm::create(),
             GridFieldDeleteAction::create(),
             GridFieldEditButton::create(),
-            GridFieldViewPDOButton::create(),
+            GridFieldViewNestButton::create(),
             // GridField_ActionMenu::create(),
         );
 
