@@ -1,0 +1,50 @@
+---
+Name: goldfinch-basement-admin
+---
+
+# Menu tree reorder
+
+Goldfinch\Dashboard\Admin\DashboardAdmin:
+  menu_priority: 50
+
+SilverStripe\CMS\Controllers\CMSPagesController:
+  menu_priority: 49
+
+Goldfinch\Components\Admin\ComponentAdmin:
+  menu_priority: 48
+
+SilverStripe\AssetAdmin\Controller\AssetAdmin:
+  menu_priority: 47
+
+Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
+  menu_priority: 46
+
+Goldfinch\Seokit\Admin\SEOAdmin:
+  menu_priority: 45
+
+Goldfinch\BugTracker\Admin\BugTrackerAdmin:
+  menu_priority: 44
+
+Goldfinch\Performance\Admin\PerformanceAdmin:
+  menu_priority: 43
+
+Axllent\MetaEditor\MetaEditor:
+  menu_priority: 42
+
+SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+  menu_priority: 41
+
+SilverStripe\VersionedAdmin\ArchiveAdmin:
+  menu_priority: 40
+
+SilverStripe\CampaignAdmin\CampaignAdmin:
+  menu_priority: 39
+
+SilverStripe\Reports\ReportAdmin:
+  menu_priority: 38
+
+SilverStripe\Admin\SecurityAdmin:
+  menu_priority: 37
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: 36
