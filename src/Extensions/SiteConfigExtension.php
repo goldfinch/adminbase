@@ -61,35 +61,35 @@ class SiteConfigExtension extends DataExtension
                 CheckboxField::create('GeneralFacebook', 'Facebook'),
                 TextField::create('GeneralFacebookURL', '')->setAttribute('placeholder', 'https://facebook.com/...')->displayIf('GeneralFacebook')->isChecked()->end(),
 
-            ),
+            )->setName('GeneralFacebookHolder'),
 
             CompositeField::create(
 
                 CheckboxField::create('GeneralInstagram', 'Instagram'),
                 TextField::create('GeneralInstagramURL', '')->setAttribute('placeholder', 'https://www.instagram.com/...')->displayIf('GeneralInstagram')->isChecked()->end(),
 
-            ),
+            )->setName('GeneralInstagramHolder'),
 
             CompositeField::create(
 
                 CheckboxField::create('GeneralTwitter', 'Twitter'),
                 TextField::create('GeneralTwitterURL', '')->setAttribute('placeholder', 'https://twitter.com/...')->displayIf('GeneralTwitter')->isChecked()->end(),
 
-            ),
+            )->setName('GeneralTwitterHolder'),
 
             CompositeField::create(
 
                 CheckboxField::create('GeneralYouTube', 'YouTube'),
                 TextField::create('GeneralYouTubeURL', '')->setAttribute('placeholder', 'https://www.youtube.com/...')->displayIf('GeneralYouTube')->isChecked()->end(),
 
-            ),
+            )->setName('GeneralYouTubeHolder'),
 
             CompositeField::create(
 
                 CheckboxField::create('GeneralLinkedIn', 'LinkedIn'),
                 TextField::create('GeneralLinkedInURL', '')->setAttribute('placeholder', 'https://www.linkedin.com/...')->displayIf('GeneralLinkedIn')->isChecked()->end(),
 
-            ),
+            )->setName('GeneralLinkedInHolder'),
 
         ])->findTab('Root.SocialMedia')->setTitle('Social Media');
 
