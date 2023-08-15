@@ -26,10 +26,10 @@ class SiteConfigExtension extends DataExtension
         'GeneralInstagramURL' => 'Varchar',
         'GeneralTwitter' => 'Boolean',
         'GeneralTwitterURL' => 'Varchar',
-        'GeneralYouTube' => 'Boolean',
-        'GeneralYouTubeURL' => 'Varchar',
         'GeneralLinkedIn' => 'Boolean',
         'GeneralLinkedInURL' => 'Varchar',
+        'GeneralYouTube' => 'Boolean',
+        'GeneralYouTubeURL' => 'Varchar',
     ];
 
     private static $has_one = [
@@ -79,17 +79,17 @@ class SiteConfigExtension extends DataExtension
 
             CompositeField::create(
 
-                CheckboxField::create('GeneralYouTube', 'YouTube'),
-                TextField::create('GeneralYouTubeURL', '')->setAttribute('placeholder', 'https://www.youtube.com/...')->displayIf('GeneralYouTube')->isChecked()->end(),
-
-            )->setName('GeneralYouTubeHolder'),
-
-            CompositeField::create(
-
                 CheckboxField::create('GeneralLinkedIn', 'LinkedIn'),
                 TextField::create('GeneralLinkedInURL', '')->setAttribute('placeholder', 'https://www.linkedin.com/...')->displayIf('GeneralLinkedIn')->isChecked()->end(),
 
             )->setName('GeneralLinkedInHolder'),
+
+            CompositeField::create(
+
+                CheckboxField::create('GeneralYouTube', 'YouTube'),
+                TextField::create('GeneralYouTubeURL', '')->setAttribute('placeholder', 'https://www.youtube.com/...')->displayIf('GeneralYouTube')->isChecked()->end(),
+
+            )->setName('GeneralYouTubeHolder'),
 
         ])->findTab('Root.SocialMedia')->setTitle('Social Media');
 
