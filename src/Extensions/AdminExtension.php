@@ -13,10 +13,10 @@ class AdminExtension extends Extension
     public function init()
     {
         // fix issue 'tinymce is not defined'
-        $cmsConfig = HTMLEditorConfig::get('cms');
-        $generator = Injector::inst()->get(TinyMCECombinedGenerator::class);
-        $link = $generator->getScriptURL($cmsConfig);
+        // $cmsConfig = \SilverStripe\Forms\HTMLEditor\HTMLEditorConfig::get('cms');
+        // $generator = \SilverStripe\Core\Injector\Injector::inst()->get(\SilverStripe\Forms\HTMLEditor\TinyMCECombinedGenerator::class);
+        // $link = $generator->getScriptURL($cmsConfig);
 
-        Requirements::javascript($link);
+        // \SilverStripe\View\Requirements::insertHeadTags('<script type="text/javascript" src="' . $link . '"></script>');
     }
 }
