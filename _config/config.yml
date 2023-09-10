@@ -8,10 +8,6 @@ After:
   - '#elementalcache'
 ---
 
-# SilverStripe\Admin\LeftAndMain:
-#   extensions:
-#     - Goldfinch\Basement\Extensions\AdminExtension
-
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Goldfinch\Basement\Extensions\ContentControllerExtension
