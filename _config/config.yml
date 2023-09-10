@@ -29,3 +29,7 @@ Page:
 DNADesign\Elemental\Models\BaseElement:
   extensions:
     - Goldfinch\Basement\Extensions\BaseElementExtension
+
+# to avoid issues with http when it should be https (admin.types.graphql, assets, bundle etc.)
+SilverStripe\Control\Director:
+  alternate_base_url: '`SS_BASE_URL`'
