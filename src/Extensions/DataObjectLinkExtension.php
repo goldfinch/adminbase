@@ -2,33 +2,40 @@
 
 namespace Goldfinch\Basement\Extensions;
 
+use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
-// TODO
 class DataObjectLinkExtension extends DataExtension
 {
-    public function Link($full = false)
+    public function updateCMSFields(FieldList $fields)
     {
-        $return = '';
-
-        $page = DataObject::get()->first();
-
-        if ($page) {
-
-            $return = $page->Link() . $this->URLSegment;
-        }
-
-        if ($full && $full !== 'false') {
-            $return = str_replace('://', '/--/', Director::absoluteBaseURL() . $return);
-            $return = str_replace('//', '/', $return);
-            $return = str_replace('/--/', '://', $return);
-        }
-
-        return $return;
+        $fields->removeByName([
+          'Sort',
+          'SortOrder',
+        ]);
     }
+    // public function Link($full = false)
+    // {
+    //     $return = '';
 
-    public function AbsoluteLink()
-    {
-        return $this->Link(true);
-    }
+    //     $page = DataObject::get()->first();
+
+    //     if ($page) {
+
+    //         $return = $page->Link() . $this->URLSegment;
+    //     }
+
+    //     if ($full && $full !== 'false') {
+    //         $return = str_replace('://', '/--/', Director::absoluteBaseURL() . $return);
+    //         $return = str_replace('//', '/', $return);
+    //         $return = str_replace('/--/', '://', $return);
+    //     }
+
+    //     return $return;
+    // }
+
+    // public function AbsoluteLink()
+    // {
+    //     return $this->Link(true);
+    // }
 }
