@@ -10,8 +10,8 @@ class DataObjectLinkExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $fields->removeByName([
-          'Sort',
-          'SortOrder',
+            'Sort',
+            'SortOrder',
         ]);
     }
     // public function Link($full = false)
