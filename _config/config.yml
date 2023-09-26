@@ -4,8 +4,6 @@ After:
   - '#goldfinch-formhandler'
   - '#goldfinch-instsupply'
   - '#goldfinch-cookieconsent'
-  - '#elemental'
-  - '#elementalcache'
 ---
 
 SilverStripe\CMS\Controllers\ContentController:
@@ -25,10 +23,6 @@ SilverStripe\CMS\Model\SiteTree:
 Page:
   extensions:
     - Goldfinch\Basement\Extensions\PageExtension
-
-DNADesign\Elemental\Models\BaseElement:
-  extensions:
-    - Goldfinch\Basement\Extensions\BaseElementExtension
 
 # to avoid issues with http when it should be https (admin.types.graphql, assets, bundle etc.)
 SilverStripe\Control\Director:
