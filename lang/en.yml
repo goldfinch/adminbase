@@ -1,0 +1,5 @@
+en:
+  SilverStripe\Security\BasicAuth:
+    ENTERINFO: 'Unauthorized' # 'Please enter a username and password.'
+    ERRORNOTADMIN: 'The user has no permissions' # 'That user is not an administrator.'
+    ERRORNOTREC: 'Authentication failed' # 'That username / password isn''t recognised'
