@@ -1,9 +1,0 @@
----
-Name: goldfinch-basement-elemental
-After:
-  - '#elemental'
----
-
-Goldfinch\Basement\Pages\Blocks:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension
