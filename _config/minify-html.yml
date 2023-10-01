@@ -1,6 +1,7 @@
 ---
 Name: goldfinch-basement-minify-html
 Only:
+  environment: live
   moduleexists: 'innoweb/silverstripe-minify-html'
 ---
 Innoweb\MinifyHTML\Util\HTMLMinifier:
