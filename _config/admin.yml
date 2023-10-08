@@ -19,7 +19,7 @@ SilverStripe\AssetAdmin\Controller\AssetAdmin:
 Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
   menu_priority: 46
 
-Goldfinch\Seokit\Admin\SEOAdmin:
+Goldfinch\Seo\Admin\SEOAdmin:
   menu_priority: 45
 
 Goldfinch\BugTracker\Admin\BugTrackerAdmin:
