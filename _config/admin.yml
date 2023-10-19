@@ -10,6 +10,11 @@ Goldfinch\Dashboard\Admin\DashboardAdmin:
 SilverStripe\CMS\Controllers\CMSPagesController:
   menu_priority: 49
 
+NSWDPC\Elemental\ElementalAdmin:
+  menu_priority: 48.5
+  menu_title: 'Blocks'
+  menu_icon_class: 'bi-box-seam'
+
 Goldfinch\Components\Admin\ComponentAdmin:
   menu_priority: 48
 
