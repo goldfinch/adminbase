@@ -21,7 +21,7 @@ Goldfinch\Components\Admin\ComponentAdmin:
 SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 47
 
-Goldfinch\FormHandler\Admin\FormEnquiryAdmin:
+Goldfinch\FormHandler\Admin\FormsAdmin:
   menu_priority: 46
 
 Goldfinch\Seo\Admin\SEOAdmin:
@@ -32,9 +32,6 @@ Goldfinch\BugTracker\Admin\BugTrackerAdmin:
 
 Goldfinch\Performance\Admin\PerformanceAdmin:
   menu_priority: 43
-
-Axllent\MetaEditor\MetaEditor:
-  menu_priority: 42
 
 SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
   menu_priority: 41
