@@ -15,8 +15,6 @@ SilverStripe\SiteConfig\SiteConfig:
     - Goldfinch\Basement\Extensions\SiteConfigExtension
 
 SilverStripe\CMS\Model\SiteTree:
-  extensions:
-    - Goldfinch\Basement\Extensions\PageExtension
   meta_generator: ""
   page_title_separator: "|"
   extensions:
