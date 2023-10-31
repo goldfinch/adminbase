@@ -15,14 +15,12 @@ SilverStripe\SiteConfig\SiteConfig:
     - Goldfinch\Basement\Extensions\SiteConfigExtension
 
 SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Goldfinch\Basement\Extensions\PageExtension
   meta_generator: ""
   page_title_separator: "|"
   extensions:
     - Goldfinch\Basement\Extensions\SiteTreeExtension
-
-SilverStripe\CMS\Model\SiteTree:
-  extensions:
-    - Goldfinch\Basement\Extensions\PageExtension
 
 # to avoid issues with http when it should be https (admin.types.graphql, assets, bundle etc.)
 SilverStripe\Control\Director:
