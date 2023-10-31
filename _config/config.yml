@@ -20,7 +20,7 @@ SilverStripe\CMS\Model\SiteTree:
   extensions:
     - Goldfinch\Basement\Extensions\SiteTreeExtension
 
-Page:
+SilverStripe\CMS\Model\SiteTree:
   extensions:
     - Goldfinch\Basement\Extensions\PageExtension
 
