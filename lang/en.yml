@@ -3,3 +3,23 @@ en:
     ENTERINFO: 'Unauthorized' # 'Please enter a username and password.'
     ERRORNOTADMIN: 'The user has no permissions' # 'That user is not an administrator.'
     ERRORNOTREC: 'Authentication failed' # 'That username / password isn''t recognised'
+  SilverStripe\SiteConfig\SiteConfig:
+    SITENAMEDEFAULT: 'New Website'
+    TAGLINEDEFAULT: ''
+  SilverStripe\Security\DefaultAdminService:
+    DefaultAdminFirstname: 'Admin'
+  SilverStripe\CMS\Model\SiteTree:
+      DEFAULTABOUTCONTENT: ''
+      DEFAULTABOUTTITLE: 'About'
+      DEFAULTCONTACTCONTENT: ''
+      DEFAULTCONTACTTITLE: 'Contact'
+      DEFAULTHOMECONTENT: ''
+      DEFAULTHOMETITLE: Home
+  SilverStripe\ErrorPage\ErrorPage:
+      DEFAULTERRORPAGECONTENT: '<p>Sorry, it seems you were trying to access a page that doesn''t exist.</p><p>Please check the spelling of the URL you were trying to access and try again.</p>'
+      DEFAULTERRORPAGETITLE: 'Page not found'
+      DEFAULTSERVERERRORPAGECONTENT: '<p>Sorry, there was a problem with handling your request.</p>'
+      DEFAULTSERVERERRORPAGETITLE: 'Server error'
+  SilverStripe\Security\Group:
+    DefaultGroupTitleAdministrators: Administrators
+    DefaultGroupTitleContentAuthors: 'Content Authors'
