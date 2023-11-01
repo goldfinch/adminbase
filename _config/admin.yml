@@ -33,6 +33,9 @@ Goldfinch\BugTracker\Admin\BugTrackerAdmin:
 Goldfinch\Performance\Admin\PerformanceAdmin:
   menu_priority: 43
 
+Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+  menu_priority: 42
+
 SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
   menu_priority: 41
 
