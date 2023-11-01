@@ -45,11 +45,8 @@ class PageExtension extends Extension
         $mainFields = $this->owner->getCMSFields();
 
         $visibilityTab = $fields->findTab('Root.Settings')->getChildren()->findTab('Visibility');
-        $googleSitemapTab = $fields->findTab('Root.Settings')->getChildren()->findTab('GoogleSitemap');
 
         $fields->findTab('Root.Settings')->getChildren()->removeByName([
-          'GoogleSitemap',
-          'GoogleSitemapIntro',
           'Priority',
           'Visibility',
           'ShowInMenus',
@@ -71,7 +68,6 @@ class PageExtension extends Extension
               )->setTitle('Visibility')
 
               // $visibilityTab,
-              // $googleSitemapTab,
           ]
         );
 
@@ -81,8 +77,6 @@ class PageExtension extends Extension
               TextField::create('MetaTitle', 'Meta title'),
 
               TextareaField::create('MetaDescription', 'Meta description'),
-
-              $googleSitemapTab,
 
               CheckboxField::create('ShowInSearch', 'Show in search'),
 

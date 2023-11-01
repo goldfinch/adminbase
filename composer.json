@@ -15,7 +15,6 @@
         "silverstripe/admin": "^2.0",
         "unclecheese/display-logic": "^3.0",
         "gorriecoe/silverstripe-linkfield": "^1.1",
-        "wilr/silverstripe-googlesitemaps": "^3.0",
         "goldfinch/service": "dev-main"
     },
     "autoload": {
