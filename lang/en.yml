@@ -16,7 +16,7 @@ en:
       DEFAULTHOMECONTENT: ''
       DEFAULTHOMETITLE: Home
   SilverStripe\ErrorPage\ErrorPage:
-      DEFAULTERRORPAGECONTENT: '<p>Sorry, it seems you were trying to access a page that doesn''t exist.</p><p>Please check the spelling of the URL you were trying to access and try again.</p>'
+      DEFAULTERRORPAGECONTENT: '<p>Sorry, the page you are trying to access is not found.</p>'
       DEFAULTERRORPAGETITLE: 'Page not found'
       DEFAULTSERVERERRORPAGECONTENT: '<p>Sorry, there was a problem with handling your request.</p>'
       DEFAULTSERVERERRORPAGETITLE: 'Server error'
