@@ -11,45 +11,82 @@ SilverStripe\CMS\Controllers\CMSPagesController:
   menu_priority: 49
 
 NSWDPC\Elemental\ElementalAdmin:
-  menu_priority: 48.5
+  menu_priority: 48
   menu_title: 'Blocks'
   menu_icon_class: 'bi-box-seam'
 
-Goldfinch\Components\Admin\ComponentAdmin:
-  menu_priority: 48
-
-SilverStripe\AssetAdmin\Controller\AssetAdmin:
+Goldfinch\HTMLComponents\Admin\HTMLComponentsAdmin:
   menu_priority: 47
 
-Goldfinch\FormHandler\Admin\FormsAdmin:
+Goldfinch\Component\Media\Admin\MediaAdmin:
   menu_priority: 46
 
-Goldfinch\Seo\Admin\SEOAdmin:
+Goldfinch\Component\Forms\Admin\FormsAdmin:
   menu_priority: 45
 
-Goldfinch\BugTracker\Admin\BugTrackerAdmin:
+SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 44
 
-Goldfinch\Performance\Admin\PerformanceAdmin:
+Goldfinch\Seo\Admin\SEOMetaAdmin:
   menu_priority: 43
 
-Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+Goldfinch\Component\Blog\Admin\BlogAdmin:
   menu_priority: 42
 
-SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+Goldfinch\Component\Projects\Admin\ProjectsAdmin:
   menu_priority: 41
 
-SilverStripe\VersionedAdmin\ArchiveAdmin:
+Goldfinch\Component\Products\Admin\ProductsAdmin:
   menu_priority: 40
 
-SilverStripe\CampaignAdmin\CampaignAdmin:
+Goldfinch\Component\Events\Admin\EventsAdmin:
   menu_priority: 39
 
-SilverStripe\Reports\ReportAdmin:
+Goldfinch\Component\Services\Admin\ServicesAdmin:
   menu_priority: 38
 
-SilverStripe\Admin\SecurityAdmin:
+Goldfinch\Component\Team\Admin\TeamAdmin:
   menu_priority: 37
 
-SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+Goldfinch\Component\Brands\Admin\BrandsAdmin:
   menu_priority: 36
+
+Goldfinch\Component\FAQ\Admin\FAQAdmin:
+  menu_priority: 35
+
+Goldfinch\Component\Reviews\Admin\ReviewsAdmin:
+  menu_priority: 34
+
+Goldfinch\Component\BlankItem\Admin\BlanksAdmin:
+  menu_priority: 33
+
+# --
+
+Goldfinch\BugTracker\Admin\BugTrackerAdmin:
+  menu_priority: 32
+
+Goldfinch\Performance\Admin\PerformanceAdmin:
+  menu_priority: 31
+
+# --
+
+SilverStripe\VersionedAdmin\ArchiveAdmin:
+  menu_priority: 30
+
+SilverStripe\CampaignAdmin\CampaignAdmin:
+  menu_priority: 29
+
+SilverStripe\Reports\ReportAdmin:
+  menu_priority: 28
+
+SilverStripe\Admin\SecurityAdmin:
+  menu_priority: 27
+
+# SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+#   menu_priority: 27.5
+
+Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+  menu_priority: 26
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: 25
