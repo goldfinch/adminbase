@@ -24,6 +24,9 @@ Goldfinch\Component\Media\Admin\MediaAdmin:
 Goldfinch\Component\Forms\Admin\FormsAdmin:
   menu_priority: 45
 
+Goldfinch\Component\Maps\Admin\MapsAdmin:
+  menu_priority: 44.5
+
 SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 44
 
