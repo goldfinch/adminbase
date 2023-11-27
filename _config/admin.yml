@@ -21,6 +21,9 @@ Goldfinch\HTMLComponents\Admin\HTMLComponentsAdmin:
 Goldfinch\Component\Media\Admin\MediaAdmin:
   menu_priority: 46
 
+Goldfinch\SocialMedia\Admin\SocialMediaAdmin:
+  menu_priority: 45.5
+
 Goldfinch\Component\Forms\Admin\FormsAdmin:
   menu_priority: 45
 
