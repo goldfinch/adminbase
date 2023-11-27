@@ -28,3 +28,6 @@ SilverStripe\Control\Director:
 
 Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
   menu_icon_class: 'bi-cone-striped'
+
+SilverStripe\Admin\LeftAndMain:
+  help_links:
