@@ -8,15 +8,12 @@ After:
 
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
+    - Goldfinch\Basement\Extensions\FooterMenuExtension
     - Goldfinch\Basement\Extensions\ContentControllerExtension
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - Goldfinch\Basement\Extensions\SiteConfigExtension
-
-SilverStripe\CMS\Controllers\ContentController:
-  extensions:
-    - Goldfinch\Basement\Extensions\FooterMenuExtension
 
 SilverStripe\CMS\Model\SiteTree:
   extensions:
