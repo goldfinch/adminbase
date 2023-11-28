@@ -29,5 +29,17 @@ SilverStripe\Control\Director:
 Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
   menu_icon_class: 'bi-cone-striped'
 
+# reset before secondaries
 SilverStripe\Admin\LeftAndMain:
   help_links:
+
+---
+Name: goldfinch-basement-secondaries
+After:
+  - '#goldfinch-basement'
+---
+
+SilverStripe\Admin\LeftAndMain:
+  help_links:
+    "Clear cache": "/?flush=all"
+
