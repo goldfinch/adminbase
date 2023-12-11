@@ -15,7 +15,7 @@
         "silverstripe/admin": "^2.0",
         "unclecheese/display-logic": "^3.0",
         "gorriecoe/silverstripe-linkfield": "^1.1",
-        "goldfinch/service": "dev-main"
+        "goldfinch/service": "^1.0"
     },
     "autoload": {
         "psr-4": {
