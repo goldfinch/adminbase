@@ -5,6 +5,7 @@ namespace Goldfinch\Basement\Extensions;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\CMS\Model\SiteTreeExtension as BaseSiteTreeExtension;
+use Goldfinch\Enchantment\Helpers\BuildHelper;
 
 class SiteTreeExtension extends BaseSiteTreeExtension
 {
@@ -14,7 +15,7 @@ class SiteTreeExtension extends BaseSiteTreeExtension
         {
             $icon = 'font-icon-eye';
 
-            if(class_exists(\Goldfinch\Enchantment\Helpers\BuildHelper))
+            if(class_exists(BuildHelper::class))
             {
                 $icon = 'bi bi-binoculars-fill';
             }

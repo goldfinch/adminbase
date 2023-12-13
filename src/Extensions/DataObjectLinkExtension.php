@@ -12,6 +12,7 @@ class DataObjectLinkExtension extends DataExtension
         $fields->removeByName([
             'Sort',
             'SortOrder',
+            'SortExtra',
         ]);
     }
     // public function Link($full = false)
