@@ -56,9 +56,9 @@ class PageExtension extends Extension
         $fields->addFieldsToTab(
           'Root.General',
           [
-              $mainFields->dataFieldByName('Title'),
-              $mainFields->dataFieldByName('URLSegment')->setTitle('URL'),
-              $mainFields->dataFieldByName('MenuTitle'),
+              // $mainFields->dataFieldByName('Title'),
+              // $mainFields->dataFieldByName('URLSegment')->setTitle('URL'),
+              // $mainFields->dataFieldByName('MenuTitle'),
 
               FieldGroup::create(
 
@@ -103,7 +103,7 @@ class PageExtension extends Extension
 
         if (get_class(Controller::curr()) === CMSPageEditController::class)
         {
-            $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
+            // $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
     }
 
