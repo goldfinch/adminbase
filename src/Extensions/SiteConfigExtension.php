@@ -41,6 +41,8 @@ class SiteConfigExtension extends DataExtension
 
         $fields->addFieldsToTab('Root.Configurations', []);
 
+        $fields->dataFieldByName('PlaceholderImage')->setFolderName('basement');
+
         // Tabs Reorder
         $fields = $this->orderTabs([
             'Configurations',
