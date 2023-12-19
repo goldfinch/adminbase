@@ -2,10 +2,10 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use gorriecoe\Link\Models\Link;
+use SilverStripe\LinkField\Models\Link;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
-use gorriecoe\LinkField\LinkField;
+use SilverStripe\AnyField\Form\AnyField;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\CheckboxField;
@@ -84,7 +84,7 @@ class PageExtension extends Extension
 
               Wrapper::create(
 
-                LinkField::create('ShowOnlyToRobots_BackLink', 'Back link for users', $this->owner),
+                AnyField::create('ShowOnlyToRobots_BackLink', 'Back link for users'),
 
               )->displayIf('ShowOnlyToRobots')->isChecked()->end(),
 
