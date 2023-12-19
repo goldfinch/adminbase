@@ -14,7 +14,8 @@
         "silverstripe/framework": "^5.0",
         "silverstripe/admin": "^2.0",
         "unclecheese/display-logic": "^3.0",
-        "gorriecoe/silverstripe-linkfield": "^1.1",
+        "maxime-rainville/anyfield": "^0.0.0",
+        "silverstripe/linkfield": "^3",
         "goldfinch/service": "^1.0"
     },
     "autoload": {
