@@ -11,16 +11,24 @@ class SiteTreeExtension extends BaseSiteTreeExtension
 {
     public function updateCMSActions(FieldList $actions)
     {
-        if ($this->owner->hasMethod('Link'))
-        {
+        if ($this->owner->hasMethod('Link')) {
             $icon = 'font-icon-eye';
 
-            if(class_exists(BuildHelper::class))
-            {
+            if (class_exists(BuildHelper::class)) {
                 $icon = 'bi bi-binoculars-fill';
             }
 
-            $actions->insertBefore('ActionMenus', LiteralField::create('pagereview', '<a target="_blank" href="'.$this->owner->Link().'?stage=Stage" class="btn btn-primary '.$icon.' me-1" title="Review page on the website"></a>'));
+            $actions->insertBefore(
+                'ActionMenus',
+                LiteralField::create(
+                    'pagereview',
+                    '<a target="_blank" href="' .
+                        $this->owner->Link() .
+                        '?stage=Stage" class="btn btn-primary ' .
+                        $icon .
+                        ' me-1" title="Review page on the website"></a>',
+                ),
+            );
         }
     }
 

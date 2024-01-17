@@ -1,25 +1,25 @@
 en:
   SilverStripe\Security\BasicAuth:
-    ENTERINFO: 'Unauthorized' # 'Please enter a username and password.'
-    ERRORNOTADMIN: 'The user has no permissions' # 'That user is not an administrator.'
-    ERRORNOTREC: 'Authentication failed' # 'That username / password isn''t recognised'
+    ENTERINFO: "Unauthorized" # 'Please enter a username and password.'
+    ERRORNOTADMIN: "The user has no permissions" # 'That user is not an administrator.'
+    ERRORNOTREC: "Authentication failed" # 'That username / password isn''t recognised'
   SilverStripe\SiteConfig\SiteConfig:
-    SITENAMEDEFAULT: 'New Website'
-    TAGLINEDEFAULT: ''
+    SITENAMEDEFAULT: "New Website"
+    TAGLINEDEFAULT: ""
   SilverStripe\Security\DefaultAdminService:
-    DefaultAdminFirstname: 'Admin'
+    DefaultAdminFirstname: "Admin"
   SilverStripe\CMS\Model\SiteTree:
-      DEFAULTABOUTCONTENT: ''
-      DEFAULTABOUTTITLE: 'About'
-      DEFAULTCONTACTCONTENT: ''
-      DEFAULTCONTACTTITLE: 'Contact'
-      DEFAULTHOMECONTENT: ''
-      DEFAULTHOMETITLE: Home
+    DEFAULTABOUTCONTENT: ""
+    DEFAULTABOUTTITLE: "About"
+    DEFAULTCONTACTCONTENT: ""
+    DEFAULTCONTACTTITLE: "Contact"
+    DEFAULTHOMECONTENT: ""
+    DEFAULTHOMETITLE: Home
   SilverStripe\ErrorPage\ErrorPage:
-      DEFAULTERRORPAGECONTENT: '<p>Sorry, the page you are trying to access is not found.</p>'
-      DEFAULTERRORPAGETITLE: 'Page not found'
-      DEFAULTSERVERERRORPAGECONTENT: '<p>Sorry, there was a problem with handling your request.</p>'
-      DEFAULTSERVERERRORPAGETITLE: 'Server error'
+    DEFAULTERRORPAGECONTENT: "<p>Sorry, the page you are trying to access is not found.</p>"
+    DEFAULTERRORPAGETITLE: "Page not found"
+    DEFAULTSERVERERRORPAGECONTENT: "<p>Sorry, there was a problem with handling your request.</p>"
+    DEFAULTSERVERERRORPAGETITLE: "Server error"
   SilverStripe\Security\Group:
     DefaultGroupTitleAdministrators: Administrators
-    DefaultGroupTitleContentAuthors: 'Content Authors'
+    DefaultGroupTitleContentAuthors: "Content Authors"

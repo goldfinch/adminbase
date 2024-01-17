@@ -22,20 +22,16 @@ class SiteConfigExtension extends DataExtension
         'PlaceholderImage' => Image::class,
     ];
 
-    private static $owns = [
-        'PlaceholderImage',
-    ];
+    private static $owns = ['PlaceholderImage'];
 
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldsToTab('Root.Main', [
-
             EmailField::create('GeneralEmail', 'Email'),
             TextField::create('GeneralPhone', 'Phone'),
             TextField::create('GeneralAddress', 'Address'),
             UploadField::create('PlaceholderImage', 'Placeholder image'),
             TextField::create('GeneralCopyright', 'Copyright'),
-
         ]);
 
         $fields->addFieldsToTab('Root.Configurations', []);
@@ -43,11 +39,10 @@ class SiteConfigExtension extends DataExtension
         $fields->dataFieldByName('PlaceholderImage')->setFolderName('basement');
 
         // Tabs Reorder
-        $fields = $this->orderTabs([
-            'Configurations',
-            'Forms',
-            'CookieConsent',
-        ], $fields);
+        $fields = $this->orderTabs(
+            ['Configurations', 'Forms', 'CookieConsent'],
+            $fields,
+        );
 
         // Rename Main tab at the very end
         $fields->fieldByName('Root.Main')->setTitle('General');
@@ -55,12 +50,10 @@ class SiteConfigExtension extends DataExtension
 
     protected function orderTabs($tabs, $fields)
     {
-        foreach(array_reverse($tabs) as $tabName)
-        {
+        foreach (array_reverse($tabs) as $tabName) {
             $tab = $fields->fieldByName('Root.' . $tabName);
 
-            if ($tab)
-            {
+            if ($tab) {
                 $fields->removeFieldFromTab('Root', $tabName);
                 $fields->insertAfter('Main', $tab);
             }

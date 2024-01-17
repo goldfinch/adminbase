@@ -43,52 +43,53 @@ class PageExtension extends Extension
 
         $mainFields = $this->owner->getCMSFields();
 
-        $visibilityTab = $fields->findTab('Root.Settings')->getChildren()->findTab('Visibility');
+        $visibilityTab = $fields
+            ->findTab('Root.Settings')
+            ->getChildren()
+            ->findTab('Visibility');
 
-        $fields->findTab('Root.Settings')->getChildren()->removeByName([
-          'Priority',
-          'Visibility',
-          'ShowInMenus',
-          'ShowInSearch',
+        $fields
+            ->findTab('Root.Settings')
+            ->getChildren()
+            ->removeByName([
+                'Priority',
+                'Visibility',
+                'ShowInMenus',
+                'ShowInSearch',
+            ]);
+
+        $fields->addFieldsToTab('Root.General', [
+            // $mainFields->dataFieldByName('Title'),
+            // $mainFields->dataFieldByName('URLSegment')->setTitle('URL'),
+            // $mainFields->dataFieldByName('MenuTitle'),
+
+            FieldGroup::create(
+                CheckboxField::create('ShowInMenus', 'Show in menus'),
+                CheckboxField::create('ShowInFooter', 'Show in footer'),
+            )->setTitle('Visibility'),
+
+            // $visibilityTab,
         ]);
 
-        $fields->addFieldsToTab(
-          'Root.General',
-          [
-              // $mainFields->dataFieldByName('Title'),
-              // $mainFields->dataFieldByName('URLSegment')->setTitle('URL'),
-              // $mainFields->dataFieldByName('MenuTitle'),
+        $fields->addFieldsToTab('Root.SEO', [
+            TextField::create('MetaTitle', 'Meta title'),
 
-              FieldGroup::create(
+            TextareaField::create('MetaDescription', 'Meta description'),
 
-                  CheckboxField::create('ShowInMenus', 'Show in menus'),
-                  CheckboxField::create('ShowInFooter', 'Show in footer')
+            CheckboxField::create('ShowInSearch', 'Show in search'),
 
-              )->setTitle('Visibility')
+            CheckboxField::create('ShowOnlyToRobots', 'Show only to robots'),
 
-              // $visibilityTab,
-          ]
-        );
-
-        $fields->addFieldsToTab(
-          'Root.SEO',
-          [
-              TextField::create('MetaTitle', 'Meta title'),
-
-              TextareaField::create('MetaDescription', 'Meta description'),
-
-              CheckboxField::create('ShowInSearch', 'Show in search'),
-
-              CheckboxField::create('ShowOnlyToRobots', 'Show only to robots'),
-
-              Wrapper::create(
-
-                AnyField::create('ShowOnlyToRobots_BackLink', 'Back link for users'),
-
-              )->displayIf('ShowOnlyToRobots')->isChecked()->end(),
-
-          ]
-        );
+            Wrapper::create(
+                AnyField::create(
+                    'ShowOnlyToRobots_BackLink',
+                    'Back link for users',
+                ),
+            )
+                ->displayIf('ShowOnlyToRobots')
+                ->isChecked()
+                ->end(),
+        ]);
 
         // tab reorder
         $settingFields = $fields->findTab('Root.Settings');
@@ -100,8 +101,7 @@ class PageExtension extends Extension
     {
         $fields->removeByName(['ExtraMeta', 'Metadata']);
 
-        if (get_class(Controller::curr()) === CMSPageEditController::class)
-        {
+        if (get_class(Controller::curr()) === CMSPageEditController::class) {
             // $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
     }

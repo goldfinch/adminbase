@@ -1,7 +1,6 @@
 ---
 Name: goldfinch-basement-admin
 ---
-
 # Menu tree reorder
 
 Goldfinch\Dashboard\Admin\DashboardAdmin:
@@ -12,12 +11,11 @@ SilverStripe\CMS\Controllers\CMSPagesController:
 
 NSWDPC\Elemental\ElementalAdmin:
   menu_priority: 48
-  menu_title: 'Blocks'
-  menu_icon_class: 'bi-box-seam'
+  menu_title: "Blocks"
+  menu_icon_class: "bi-box-seam"
 
 # Goldfinch\Seo\Admin\SEOMetaAdmin:
 #   menu_priority: 47.5
-
 
 SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 47.4
@@ -104,15 +102,13 @@ Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
 SilverStripe\SiteConfig\SiteConfigLeftAndMain:
   menu_priority: 25
 
-
 ---
 Name: goldfinch-basement-admin-seo
 Only:
-  moduleexists: 'goldfinch/seo'
-After: '#goldfinch-seo-admin'
+  moduleexists: "goldfinch/seo"
+After: "#goldfinch-seo-admin"
 ---
-
 SilverStripe\Admin\LeftAndMain:
   menu_groups:
-    'SEO & Tools':
+    "SEO & Tools":
       priority: 47.5

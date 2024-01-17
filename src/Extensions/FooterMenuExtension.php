@@ -16,8 +16,8 @@ class FooterMenuExtension extends Extension
     {
         if ($level == 1) {
             $result = SiteTree::get()->filter([
-                "ShowInFooter" => 1,
-                "ParentID" => 0,
+                'ShowInFooter' => 1,
+                'ParentID' => 0,
             ]);
         } else {
             $parent = $this->data();

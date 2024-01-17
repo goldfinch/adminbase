@@ -11,8 +11,7 @@ class BaseElementExtension extends DataExtension
     {
         $title = $fields->dataFieldByName('Title');
 
-        if ($title)
-        {
+        if ($title) {
             $title->setTitle('Block Title');
             $fields->removeByName('Title');
             $fields->insertBefore('ExtraClass', $title);
@@ -28,7 +27,7 @@ class BaseElementExtension extends DataExtension
         parent::onBeforeWrite();
 
         if (!$this->owner->Title) {
-          $this->owner->Title = $this->owner->getType();
+            $this->owner->Title = $this->owner->getType();
         }
     }
 

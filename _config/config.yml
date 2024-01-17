@@ -1,11 +1,10 @@
 ---
 Name: goldfinch-basement
 After:
-  - '#goldfinch-formhandler'
-  - '#goldfinch-instsupply'
-  - '#goldfinch-cookieconsent'
+  - "#goldfinch-formhandler"
+  - "#goldfinch-instsupply"
+  - "#goldfinch-cookieconsent"
 ---
-
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Goldfinch\Basement\Extensions\FooterMenuExtension
@@ -24,10 +23,10 @@ SilverStripe\CMS\Model\SiteTree:
 
 # to avoid issues with http when it should be https (admin.types.graphql, assets, bundle etc.)
 SilverStripe\Control\Director:
-  alternate_base_url: '`SS_BASE_URL`'
+  alternate_base_url: "`SS_BASE_URL`"
 
 Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
-  menu_icon_class: 'bi-cone-striped'
+  menu_icon_class: "bi-cone-striped"
 
 # reset before secondaries
 SilverStripe\Admin\LeftAndMain:
@@ -36,10 +35,8 @@ SilverStripe\Admin\LeftAndMain:
 ---
 Name: goldfinch-basement-secondaries
 After:
-  - '#goldfinch-basement'
+  - "#goldfinch-basement"
 ---
-
 SilverStripe\Admin\LeftAndMain:
   help_links:
     "Clear cache": "/?flush=all"
-
