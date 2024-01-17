@@ -2,8 +2,8 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use SilverStripe\Core\Extension;
 use Goldfinch\Service\Helpers\BaseHelper;
+use SilverStripe\Core\Extension;
 
 class ContentControllerExtension extends Extension
 {

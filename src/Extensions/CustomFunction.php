@@ -15,6 +15,6 @@ class CustomFunctions extends DataExtension
 
     public function Carbon()
     {
-        return;
+
     }
 }

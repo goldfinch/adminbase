@@ -2,10 +2,10 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\LiteralField;
 use Goldfinch\Enchantment\Helpers\BuildHelper;
 use SilverStripe\CMS\Model\SiteTreeExtension as BaseSiteTreeExtension;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\LiteralField;
 
 class SiteTreeExtension extends BaseSiteTreeExtension
 {
@@ -22,10 +22,10 @@ class SiteTreeExtension extends BaseSiteTreeExtension
                 'ActionMenus',
                 LiteralField::create(
                     'pagereview',
-                    '<a target="_blank" href="' .
-                        $this->owner->Link() .
-                        '?stage=Stage" class="btn btn-primary ' .
-                        $icon .
+                    '<a target="_blank" href="'.
+                        $this->owner->Link().
+                        '?stage=Stage" class="btn btn-primary '.
+                        $icon.
                         ' me-1" title="Review page on the website"></a>',
                 ),
             );

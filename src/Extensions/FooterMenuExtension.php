@@ -2,22 +2,21 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use SilverStripe\ORM\ArrayList;
-use SilverStripe\Core\Extension;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Core\Extension;
+use SilverStripe\ORM\ArrayList;
 
 class FooterMenuExtension extends Extension
 {
     /**
-     * based on getMenu() and Menu() of ContentController.php
+     * based on getMenu() and Menu() of ContentController.php.
      */
-
     public function getFooterMenu($level = 1)
     {
         if ($level == 1) {
             $result = SiteTree::get()->filter([
                 'ShowInFooter' => 1,
-                'ParentID' => 0,
+                'ParentID'     => 0,
             ]);
         } else {
             $parent = $this->data();

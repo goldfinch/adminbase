@@ -2,22 +2,22 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use SilverStripe\Core\Extension;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\FieldGroup;
-use SilverStripe\Control\Controller;
-use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\TextareaField;
-use SilverStripe\LinkField\Models\Link;
 use SilverStripe\AnyField\Form\AnyField;
-use UncleCheese\DisplayLogic\Forms\Wrapper;
 use SilverStripe\CMS\Controllers\CMSPageEditController;
+use SilverStripe\Control\Controller;
+use SilverStripe\Core\Extension;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\FieldGroup;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\LinkField\Models\Link;
+use UncleCheese\DisplayLogic\Forms\Wrapper;
 
 class PageExtension extends Extension
 {
     private static $db = [
-        'MetaTitle' => 'Varchar',
-        'ShowInFooter' => 'Boolean',
+        'MetaTitle'        => 'Varchar',
+        'ShowInFooter'     => 'Boolean',
         'ShowOnlyToRobots' => 'Boolean',
     ];
 

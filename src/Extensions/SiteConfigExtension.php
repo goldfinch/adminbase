@@ -2,19 +2,19 @@
 
 namespace Goldfinch\Basement\Extensions;
 
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\EmailField;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class SiteConfigExtension extends DataExtension
 {
     private static $db = [
-        'GeneralEmail' => 'Varchar',
-        'GeneralPhone' => 'Varchar',
-        'GeneralAddress' => 'Varchar',
+        'GeneralEmail'     => 'Varchar',
+        'GeneralPhone'     => 'Varchar',
+        'GeneralAddress'   => 'Varchar',
         'GeneralCopyright' => 'Varchar',
     ];
 
@@ -51,7 +51,7 @@ class SiteConfigExtension extends DataExtension
     protected function orderTabs($tabs, $fields)
     {
         foreach (array_reverse($tabs) as $tabName) {
-            $tab = $fields->fieldByName('Root.' . $tabName);
+            $tab = $fields->fieldByName('Root.'.$tabName);
 
             if ($tab) {
                 $fields->removeFieldFromTab('Root', $tabName);
