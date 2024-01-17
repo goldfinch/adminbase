@@ -7,7 +7,6 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\ORM\ValidationResult;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class SiteConfigExtension extends DataExtension
@@ -52,11 +51,6 @@ class SiteConfigExtension extends DataExtension
 
         // Rename Main tab at the very end
         $fields->fieldByName('Root.Main')->setTitle('General');
-    }
-
-    public function validate(ValidationResult $validationResult)
-    {
-        // $validationResult->addError('Error message');
     }
 
     protected function orderTabs($tabs, $fields)

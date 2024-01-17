@@ -4,8 +4,8 @@ namespace Goldfinch\Basement\Extensions;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
-use SilverStripe\CMS\Model\SiteTreeExtension as BaseSiteTreeExtension;
 use Goldfinch\Enchantment\Helpers\BuildHelper;
+use SilverStripe\CMS\Model\SiteTreeExtension as BaseSiteTreeExtension;
 
 class SiteTreeExtension extends BaseSiteTreeExtension
 {

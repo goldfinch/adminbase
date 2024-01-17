@@ -2,15 +2,14 @@
 
 namespace Goldfinch\Basement\Extensions;
 
-use SilverStripe\LinkField\Models\Link;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
-use SilverStripe\AnyField\Form\AnyField;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
-use SilverStripe\Forms\CompositeField;
+use SilverStripe\LinkField\Models\Link;
+use SilverStripe\AnyField\Form\AnyField;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
 use SilverStripe\CMS\Controllers\CMSPageEditController;
 

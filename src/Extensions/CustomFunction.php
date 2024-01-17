@@ -4,9 +4,10 @@ namespace Goldfinch\Basement\Extensions;
 
 use SilverStripe\ORM\DataExtension;
 
-// TODO
 class CustomFunctions extends DataExtension
 {
+    // TODO
+
     public function URLEncode()
     {
         return urlencode($this->owner->value);
