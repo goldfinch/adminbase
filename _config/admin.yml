@@ -38,7 +38,7 @@ Goldfinch\Youtube\Admin\YoutubeAdmin:
 Goldfinch\Component\Forms\Admin\FormsAdmin:
   menu_priority: 45
 
-Goldfinch\Component\Maps\Admin\MapsAdmin:
+Goldfinch\GoogleMaps\Admin\MapsAdmin:
   menu_priority: 44.5
 
 Goldfinch\Component\Blog\Admin\BlogAdmin:
