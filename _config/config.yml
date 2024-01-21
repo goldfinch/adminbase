@@ -31,6 +31,8 @@ Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
 SilverStripe\Admin\LeftAndMain:
   help_links:
 
+SilverStripe\Assets\Upload:
+  uploads_folder: "uploads"
 ---
 Name: goldfinch-basement-secondaries
 After:
