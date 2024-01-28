@@ -101,7 +101,7 @@ class PageExtension extends Extension
     {
         $fields->removeByName(['ExtraMeta', 'Metadata']);
 
-        if (get_class(Controller::curr()) === CMSPageEditController::class) {
+        if (Controller::has_curr() && get_class(Controller::curr()) === CMSPageEditController::class) {
             // $fields->removeByName(['Title', 'URLSegment', 'MenuTitle']);
         }
     }
