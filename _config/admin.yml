@@ -20,7 +20,7 @@ NSWDPC\Elemental\ElementalAdmin:
 SilverStripe\AssetAdmin\Controller\AssetAdmin:
   menu_priority: 47.4
 
-Goldfinch\HTMLComponents\Admin\HTMLComponentsAdmin:
+Goldfinch\HTMLSnippets\Admin\HTMLSnippetsAdmin:
   menu_priority: 47
 
 Goldfinch\Component\Media\Admin\MediaAdmin:
