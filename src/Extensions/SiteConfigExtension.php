@@ -13,8 +13,8 @@ class SiteConfigExtension extends DataExtension
 {
     private static $db = [
         'GeneralEmail' => 'Varchar',
-        'GeneralPhone' => 'Varchar',
-        'GeneralAddress' => 'Varchar',
+        'GeneralPhone' => 'Phone',
+        'GeneralAddress' => 'Place',
         'GeneralCopyright' => 'Varchar',
     ];
 
@@ -26,11 +26,15 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
+        $fields->initFielder($this->owner);
+
+        $fielder = $fields->getFielder();
+
         $fields->addFieldsToTab('Root.Main', [
-            EmailField::create('GeneralEmail', 'Email'),
-            TextField::create('GeneralPhone', 'Phone'),
-            TextField::create('GeneralAddress', 'Address'),
-            UploadField::create('PlaceholderImage', 'Placeholder image'),
+            $fielder->email('GeneralEmail', 'Email'),
+            $fielder->phone('GeneralPhone', 'Phone'),
+            $fielder->place('GeneralAddress', 'Address'),
+            ...$fielder->media('PlaceholderImage', 'Placeholder image'),
             TextField::create('GeneralCopyright', 'Copyright'),
         ]);
 
