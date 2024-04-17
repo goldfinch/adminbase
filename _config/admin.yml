@@ -9,98 +9,100 @@ Goldfinch\Dashboard\Admin\DashboardAdmin:
 SilverStripe\CMS\Controllers\CMSPagesController:
   menu_priority: 49
 
-NSWDPC\Elemental\ElementalAdmin:
-  menu_priority: 48
-  menu_title: "Blocks"
-  menu_icon_class: "bi-box-seam"
-
-# Goldfinch\Seo\Admin\SEOMetaAdmin:
-#   menu_priority: 47.5
-
-SilverStripe\AssetAdmin\Controller\AssetAdmin:
-  menu_priority: 47.4
-
-Goldfinch\HTMLSnippets\Admin\HTMLSnippetsAdmin:
-  menu_priority: 47
-
-Goldfinch\Component\Media\Admin\MediaAdmin:
-  menu_priority: 46
-
-Goldfinch\Trademe\Admin\TrademeAdmin:
-  menu_priority: 45.6
-
-Goldfinch\SocialMedia\Admin\SocialMediaAdmin:
-  menu_priority: 45.5
-
-Goldfinch\Youtube\Admin\YoutubeAdmin:
-  menu_priority: 45.4
-
-Goldfinch\Component\Forms\Admin\FormsAdmin:
-  menu_priority: 45
-
-Goldfinch\GoogleMaps\Admin\MapsAdmin:
-  menu_priority: 44.5
-
 Goldfinch\Component\Blog\Admin\BlogAdmin:
-  menu_priority: 42
+  menu_priority: 48
 
 Goldfinch\Component\Projects\Admin\ProjectsAdmin:
-  menu_priority: 41
+  menu_priority: 47
 
 Goldfinch\Component\Products\Admin\ProductsAdmin:
-  menu_priority: 40
+  menu_priority: 46
 
 Goldfinch\Component\Events\Admin\EventsAdmin:
-  menu_priority: 39
+  menu_priority: 45
 
 Goldfinch\Component\Services\Admin\ServicesAdmin:
-  menu_priority: 38
+  menu_priority: 44
 
 Goldfinch\Component\Team\Admin\TeamAdmin:
-  menu_priority: 37
+  menu_priority: 43
 
 Goldfinch\Component\Brands\Admin\BrandsAdmin:
-  menu_priority: 36
+  menu_priority: 42
 
 Goldfinch\Component\FAQ\Admin\FAQAdmin:
-  menu_priority: 35
+  menu_priority: 41
 
 Goldfinch\Component\Reviews\Admin\ReviewsAdmin:
-  menu_priority: 34
+  menu_priority: 40
 
 Goldfinch\Component\BlankItem\Admin\BlanksAdmin:
-  menu_priority: 33
+  menu_priority: 39
 
 # --
 
 Goldfinch\BugTracker\Admin\BugTrackerAdmin:
-  menu_priority: 32
+  menu_priority: 38
 
 Goldfinch\Performance\Admin\PerformanceAdmin:
+  menu_priority: 37
+
+# --
+
+NSWDPC\Elemental\ElementalAdmin:
+  menu_priority: 36
+  menu_title: "Blocks"
+  menu_icon_class: "bi-box-seam"
+
+# Goldfinch\Seo\Admin\SEOMetaAdmin:
+#   menu_priority: 35.5
+
+SilverStripe\AssetAdmin\Controller\AssetAdmin:
+  menu_priority: 35
+
+Goldfinch\HTMLSnippets\Admin\HTMLSnippetsAdmin:
+  menu_priority: 34
+
+Goldfinch\Component\Media\Admin\MediaAdmin:
+  menu_priority: 33
+
+Goldfinch\Trademe\Admin\TrademeAdmin:
+  menu_priority: 32
+
+Goldfinch\SocialMedia\Admin\SocialMediaAdmin:
   menu_priority: 31
+
+Goldfinch\Youtube\Admin\YoutubeAdmin:
+  menu_priority: 30
+
+Goldfinch\Component\Forms\Admin\FormsAdmin:
+  menu_priority: 29
+
+Goldfinch\GoogleMaps\Admin\MapsAdmin:
+  menu_priority: 28
 
 # --
 
 SilverStripe\VersionedAdmin\ArchiveAdmin:
-  menu_priority: 30
-
-SilverStripe\CampaignAdmin\CampaignAdmin:
-  menu_priority: 29
-
-SilverStripe\Reports\ReportAdmin:
-  menu_priority: 28
-
-SilverStripe\Admin\SecurityAdmin:
   menu_priority: 27
 
-# SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
-#   menu_priority: 27.5
-
-Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+SilverStripe\CampaignAdmin\CampaignAdmin:
   menu_priority: 26
 
-SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+SilverStripe\Reports\ReportAdmin:
   menu_priority: 25
+
+SilverStripe\Admin\SecurityAdmin:
+  menu_priority: 24
+
+# SilverStripe\RedirectedURLs\Admin\RedirectedURLAdmin:
+#   menu_priority: 23.5
+
+Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+  menu_priority: 23
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: 22
 
 ---
 Name: goldfinch-basement-admin-seo
@@ -111,4 +113,4 @@ After: "#goldfinch-seo-admin"
 SilverStripe\Admin\LeftAndMain:
   menu_groups:
     "SEO & Tools":
-      priority: 47.5
+      priority: 36.5
