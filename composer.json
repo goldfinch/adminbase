@@ -17,7 +17,8 @@
         "unclecheese/display-logic": "^3.0",
         "maxime-rainville/anyfield": "^0.0.0",
         "silverstripe/linkfield": "^3",
-        "goldfinch/service": "^2.0"
+        "goldfinch/service": "^2.0",
+        "spatie/ignition": "^1.14"
     },
     "autoload": {
         "psr-4": {
