@@ -54,6 +54,11 @@ NSWDPC\Elemental\ElementalAdmin:
   menu_title: "Blocks"
   menu_icon_class: "bi-box-seam"
 
+Dynamic\ElememtalTemplates\Admin\TemplateAdmin:
+  menu_priority: 35.5
+  menu_title: "Blocks templates"
+  menu_icon_class: "bi-box-seam-fill"
+
 # Goldfinch\Seo\Admin\SEOMetaAdmin:
 #   menu_priority: 35.5
 
