@@ -18,7 +18,7 @@
         "silverstripe/admin": "^2.0",
         "unclecheese/display-logic": "^3.0",
         "maxime-rainville/anyfield": "^0.0.0",
-        "silverstripe/linkfield": "^3||^4",
+        "silverstripe/linkfield": "^3 || ^4",
         "goldfinch/service": "^2.0",
         "spatie/ignition": "^1.14"
     },
